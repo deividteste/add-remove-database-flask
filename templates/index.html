@@ -9,36 +9,60 @@
 
     <style>
     body {
-        background-color: rgb(109, 109, 109);
+        background-color: #EAE7B1;
     }
 
     .box {
-        border-style: solid;
-        border-width: 3pt;
-        border-radius: 5pt;
+        padding: 20px;
+        background-color: #61876E;
+        color: white;
+        box-shadow: 0px 0px 10px black;
     }
 
     hr {
-        border-top: 2px solid black;
+        border-top: 2px solid #A6BB8D;
     }
+
+    .title_top {
+        background-color: #3C6255; 
+        color: rgb(255, 255, 255);
+        height: 60pt;
+    }
+
+    h1 {
+        padding: 15pt;
+        text-shadow: 1px 0px 2px whitesmoke ;
+    }
+
+    
     </style>
 {% endblock %}
 
 {% block content %}
-<h1 class="text-center" style="background-color: white;"><strong>BANCO DE DADOS</strong></h1>
+<div class="title_top">
+    <h1 class="text-center">
+        <strong>
+            BANCO DE DADOS
+        </strong>
+    </h1>
+</div>
 
 <div>
 
-</div class="btn-group btn-group-justified" role="group">
-     <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Left</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Middle</button>
-  </div>
-  <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">Right</button>
-  </div>
+<div class="btn-group btn-group-justified" role="group">
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Left</button>
+    </div>
+
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Middle</button>
+    </div>
+
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-default">Right</button>
+    </div>
+</div>
+
 <div style="margin-left: 30%; margin-right: 30%;">
 
     {% for category, message in get_flashed_messages(with_categories=true) %}
@@ -91,7 +115,7 @@
 <hr>
 
 <div class="row" style="margin-left: 20%; margin-right: 20%;">
-    <div class="col-md-4 box" style="padding: 20pt; background-color: white;">
+    <div class="col-md-4 box">
         <h2 class="text-center">
             ADICIONAR
             <br>
@@ -103,7 +127,7 @@
         </div>
     </div>
     
-    <div class="col-md-4 col-md-offset-4 box" style="padding: 20pt; background-color: white;">
+    <div class="col-md-4 col-md-offset-4 box">
         <h2 class="text-center">
             REMOVER
             <br>
